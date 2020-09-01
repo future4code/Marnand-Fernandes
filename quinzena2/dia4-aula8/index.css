@@ -114,6 +114,7 @@ div input{
 table {
     width: 60%;
     text-align: center;
+    margin: 0 auto;
 }
 
 td img {
@@ -137,6 +138,9 @@ td button:hover{
     height: 100px;
 }
 
+.center-button {
+    text-align: center;
+}
 
 #back-button {
     background-color: white;
