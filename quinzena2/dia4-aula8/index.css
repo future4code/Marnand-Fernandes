@@ -114,6 +114,10 @@ div input{
     border-left: none;
 }
 
+.icone:hover {
+    opacity: 0.5;
+}
+
 table {
     width: 60%;
     text-align: center;
