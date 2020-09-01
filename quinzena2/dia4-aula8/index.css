@@ -78,7 +78,8 @@ div>p:first-child {
 }
 
 #container-de-descricao>ol {
-    padding: 15px 0px;
+    display: inline-block;
+    padding: 15px 0;
 }
 
 #container-para-comprar {
