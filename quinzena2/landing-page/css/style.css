@@ -1,0 +1,178 @@
+/* limpar formatação dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.borda {
+    border-left: 1px solid #7c5744;
+}
+
+.center {
+    text-align: center;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button, input:focus {
+    outline: none;
+}
+
+/* seção principal, grid total */
+section.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-auto-flow: row;
+    font-family: 'Roboto', sans-serif;
+}
+
+header.menu {
+    background: #7c5744;
+    color: #fff;
+    display: grid;
+    grid-column: 1/-1;
+    place-content: center;
+    height: 100px;
+}
+
+nav.menu-nav {
+    color: #5a5a5a;
+    display: grid;
+    place-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 100px;
+    padding: 10px 10px;
+}
+
+nav.links {
+    display: grid;
+    justify-content: space-around;
+    border-bottom: 1px solid #7c5744;
+    padding: 10px 0;
+}
+
+.links > button {
+    background: #e5e0dd;
+    color: #5a5a5a;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+section.logo {
+    display: grid;
+    grid-column: 1/-1;
+    place-content: center;
+}
+
+.logo > img {
+    width: 100%;
+}
+
+main.middle {
+    background: #7c5744;
+    color: #fff;
+    display: grid;
+    grid-column: 1/3;
+    place-content: center;
+    padding: 10px;
+}
+
+.middle > input {
+    color: #7c5744;
+    margin: 2px 0;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+aside.menu-side {
+    background: #e5e0dd;
+    color: #5a5a5a;
+    display: grid;
+    place-content: center;
+    padding: 10px;
+}
+
+section.about {
+    color: #7c5744;
+    display: grid;
+    grid-column: 1/3;
+    padding: 20px 40px;
+    place-content: center;
+    font-weight: 900;
+}
+
+.about > h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.image > img {
+    display: grid;
+    width: 100%;
+}
+
+section.contact {
+    background: #7c5744;
+    color: #fff;
+    display: grid;
+    grid-column: 1/-1;
+}
+
+.contact > h1 {
+    font-size: 30px;
+}
+
+.contact > iframe {
+    width: 100%;
+}
+
+footer.footer {
+    background: #7c5744;
+    color: #fff;
+    display: grid;
+    grid-column: 1/-1;
+    place-content: center;
+    height: 50px;
+}
+
+.footer > div > a {
+    font-weight: 900;
+    font-size: 18px;
+    padding: 0 8px;
+}
+
+@media screen and (max-width: 800px) {
+    main.middle {
+        display: grid;
+        grid-column: 1/-1;
+    }
+
+    aside.menu-side {
+        display: grid;
+        grid-column: 1/-1;
+        place-content: center;
+    }
+
+    section.about {
+        display: grid;
+        grid-column: 1/-1; 
+    }
+
+    div.image {
+        display: grid;
+        grid-column: 1/-1;
+    }
+}
