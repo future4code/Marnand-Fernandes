@@ -4,24 +4,29 @@
     padding: 0;
 }
 
+/* destaca a borda esquerda na tag nav */
 .borda {
-    border-left: 1px solid #7c5744;
+    border-left: 1px solid #fff;
 }
 
+/* alinhamento de textos no centro, esta em varias tags diferentes */
 .center {
     text-align: center;
     padding: 10px;
 }
 
+/* formtação geral para todos os links */
 a {
     text-decoration: none;
     color: #fff;
 }
 
+/* formtação geral para todos os links hover */
 a:hover {
     text-decoration: underline;
 }
 
+/* formtação geral para todos os botões e caixa de texto focus */
 button, input:focus {
     outline: none;
 }
@@ -35,6 +40,7 @@ section.container {
     font-family: 'Roboto', sans-serif;
 }
 
+/* seção menu principal */
 header.menu {
     background: #7c5744;
     color: #fff;
@@ -44,8 +50,10 @@ header.menu {
     height: 100px;
 }
 
+/* seção menu de navegação */
 nav.menu-nav {
-    color: #5a5a5a;
+    background: #7c5744;
+    color: #fff;
     display: grid;
     place-content: center;
     width: 100%;
@@ -54,32 +62,39 @@ nav.menu-nav {
     padding: 10px 10px;
 }
 
+/* seção botões na área menu de  navegação */
 nav.links {
+    background: #7c5744;
     display: grid;
     justify-content: space-around;
-    border-bottom: 1px solid #7c5744;
     padding: 10px 0;
 }
 
+/* formatação para botões do menu de navegação */
 .links > button {
     background: #e5e0dd;
-    color: #5a5a5a;
+    color: #7c5744;
     cursor: pointer;
     border-radius: 5px;
     padding: 8px 20px;
+    font-weight: 900;
     font-size: 14px;
 }
 
+/* seção abaixo do menu de navegação, imagem da logo */
 section.logo {
+    background: #fff;
     display: grid;
     grid-column: 1/-1;
     place-content: center;
 }
 
+/* formatação da imagem da logo */
 .logo > img {
     width: 100%;
 }
 
+/* seção do meio que recebe dados de endereço de entrega do usuário */
 main.middle {
     background: #7c5744;
     color: #fff;
@@ -89,6 +104,7 @@ main.middle {
     padding: 10px;
 }
 
+/* formatação das caixas de text que receberão o endereço do usuário */
 .middle > input {
     color: #7c5744;
     margin: 2px 0;
@@ -97,14 +113,33 @@ main.middle {
     font-weight: 900;
 }
 
+/* seção do menu lateral com as promoções em destaque */
 aside.menu-side {
-    background: #e5e0dd;
-    color: #5a5a5a;
+    background-image: linear-gradient(to top, #dfa579 10%, #c79081 80%);
+    color: #fff;
     display: grid;
     place-content: center;
     padding: 10px;
 }
 
+/* formatação da lista de produtos em promoção */
+div.list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* formatação da lista de produtos em promoção */
+ul {
+    list-style-type: none;
+}
+
+/* formatação da lista de produtos em promoção */
+ul.right {
+    display: grid;
+    justify-content: end;
+}
+
+/* seção sobre nós, abaixo do meio */
 section.about {
     color: #7c5744;
     display: grid;
@@ -114,16 +149,19 @@ section.about {
     font-weight: 900;
 }
 
+/* formatação do título da seção do sobre nós */
 .about > h3 {
     margin-bottom: 10px;
     font-size: 24px;
 }
 
+/* formatação da imagem da seção do sobre nós */
 .image > img {
     display: grid;
     width: 100%;
 }
 
+/* seção onde nos encontrar, com um google-maps */
 section.contact {
     background: #7c5744;
     color: #fff;
@@ -131,14 +169,17 @@ section.contact {
     grid-column: 1/-1;
 }
 
+/* formatação título da seção onde nos encontrar */
 .contact > h1 {
     font-size: 30px;
 }
 
+/* formatação google-map da seção onde nos encontrar */
 .contact > iframe {
     width: 100%;
 }
 
+/* seção de rodapé */
 footer.footer {
     background: #7c5744;
     color: #fff;
@@ -148,29 +189,37 @@ footer.footer {
     height: 50px;
 }
 
+/* formatação dos links da seção rodapé */
 .footer > div > a {
     font-weight: 900;
     font-size: 18px;
     padding: 0 8px;
 }
 
+/****************************************** 
+    aqui começa as seções de responsividade 
+*******************************************/
 @media screen and (max-width: 800px) {
+    /* aumenta a largura da seção que recebe o endereço do cliente */
     main.middle {
         display: grid;
         grid-column: 1/-1;
     }
 
+    /* aumenta a largura da seção de promoção */
     aside.menu-side {
         display: grid;
         grid-column: 1/-1;
         place-content: center;
     }
 
+    /* aumenta a largura da seção sobre nós */
     section.about {
         display: grid;
         grid-column: 1/-1; 
     }
 
+    /* aumenta a largura da imagem da seção sobre nós*/
     div.image {
         display: grid;
         grid-column: 1/-1;
