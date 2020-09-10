@@ -57,6 +57,7 @@ section.container {
 
 /* seção do menu */
 header.menu {
+<<<<<<< HEAD
     grid-column: 1/-1 ;
 
     display: flex;
@@ -103,6 +104,35 @@ aside.side-menu {
 
 /* seção da lista de items em promoção dentro do menu lateral */
 div.list {
+=======
+    /* background: #7c5744; */
+    background-image: linear-gradient(to top, #613a24 0%, #eacda3 100%);
+    color: #fff;
+    display: grid;
+    grid-column: 1/-1;
+    place-content: center;
+    height: 100px;
+    font-weight: 900;
+}
+
+/* seção menu de navegação */
+nav.menu-nav {
+    /* background: #7c5744; */
+    background-image: linear-gradient(to top, #eacda3 0%, #613a24 70%);
+    color: #fff;
+    display: grid;
+    place-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 100px;
+    padding: 10px 10px;
+    font-weight: 900;
+}
+
+/* seção botões na área menu de  navegação */
+nav.links {
+    background: #eacda3;
+>>>>>>> f313edb992812515c4e03a57c0d1563914905c8f
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows:  auto;
@@ -249,8 +279,16 @@ section.contact {
     border-radius: 20px;
 }
 
+<<<<<<< HEAD
 /* seção do rodapé */
 footer.end {
+=======
+/* seção de rodapé */
+footer.footer {
+    /* background: #7c5744; */
+    background-image: linear-gradient(to top, #613a24 30%, #eacda3 100%);
+    color: #fff;
+>>>>>>> f313edb992812515c4e03a57c0d1563914905c8f
     display: grid;
     grid-column: 1/-1;
     grid-row: 9;
