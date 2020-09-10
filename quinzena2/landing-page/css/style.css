@@ -42,17 +42,20 @@ section.container {
 
 /* seção menu principal */
 header.menu {
-    background: #7c5744;
+    /* background: #7c5744; */
+    background-image: linear-gradient(to top, #613a24 0%, #eacda3 100%);
     color: #fff;
     display: grid;
     grid-column: 1/-1;
     place-content: center;
     height: 100px;
+    font-weight: 900;
 }
 
 /* seção menu de navegação */
 nav.menu-nav {
-    background: #7c5744;
+    /* background: #7c5744; */
+    background-image: linear-gradient(to top, #eacda3 0%, #613a24 70%);
     color: #fff;
     display: grid;
     place-content: center;
@@ -60,11 +63,12 @@ nav.menu-nav {
     box-sizing: border-box;
     min-height: 100px;
     padding: 10px 10px;
+    font-weight: 900;
 }
 
 /* seção botões na área menu de  navegação */
 nav.links {
-    background: #7c5744;
+    background: #eacda3;
     display: grid;
     justify-content: space-around;
     padding: 10px 0;
@@ -181,7 +185,8 @@ section.contact {
 
 /* seção de rodapé */
 footer.footer {
-    background: #7c5744;
+    /* background: #7c5744; */
+    background-image: linear-gradient(to top, #613a24 30%, #eacda3 100%);
     color: #fff;
     display: grid;
     grid-column: 1/-1;
