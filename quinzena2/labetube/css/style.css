@@ -1,0 +1,76 @@
+/* formatacao para limpar a formatacao dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'MuseoModerno', cursive;
+
+    background: #363636;
+    color: #fff;
+}
+
+header.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    padding: 20px;
+
+    background: #1C1C1C;
+}
+
+div.search > input {
+    font-family: 'MuseoModerno', cursive;
+
+    margin-right: 50px;
+    padding: 10px;
+}
+
+div.logo {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+section.colection {
+    width: 900px;
+    margin: 100px auto;
+
+}
+
+article.videos {
+    display: flex;
+    
+    flex-wrap: wrap;
+}
+
+div.video {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+    border: 2px solid #1C1C1C;
+}
+
+.video > a > img {
+    width: 100%;
+    height: 80%;
+
+    border-radius: 10px;
+}
+
+footer.end {
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+
+    background: #1C1C1C;
+}
