@@ -8,6 +8,8 @@ formatações gerais para algumas tags
 }
 
 body {
+    font-family: 'MuseoModerno', cursive;
+
     background-image: linear-gradient(to top, #7c5744 81%, #613a24 0%);
 }
 
@@ -196,6 +198,8 @@ main.middle {
     margin: 4px;
     padding: 10px;
     border-radius: 20px;
+
+    font-family: 'MuseoModerno', cursive;
 }
 
 /* seção do quem somos */
