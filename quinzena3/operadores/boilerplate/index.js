@@ -17,7 +17,7 @@ OSERVAÇÃO - os exercícos de escrita de código também estão comentados para
 
 //Exercício de escrita de código
 //1. 
-/*
+/* 
     let idade; 
     let idade2;
     let resposta;
@@ -31,11 +31,11 @@ OSERVAÇÃO - os exercícos de escrita de código também estão comentados para
     console.log("Sua idade é maior do que a do seu melhor amigo ou amiga?");
     console.log(resposta);
     console.log(diferenca);
-*/
+ */
 
 //2. 
-/*
-    let numPar;
+
+/*     let numPar;
     let resto;
 
     numPar = Number(prompt("Insira um número par"));
@@ -43,13 +43,13 @@ OSERVAÇÃO - os exercícos de escrita de código também estão comentados para
 
     console.log(resto);
     
-    Notei que o resto sempre será 0
+//    Notei que o resto sempre será 0
 
-    Caso o número digitado seja ímpar o resto sempre será 1
-*/
+//    Caso o número digitado seja ímpar o resto sempre será 1
+ */
 
 //3. 
-/*
+/* 
     let listaDeTarefas = [];
     let deletaDaLista;
     
@@ -64,8 +64,8 @@ OSERVAÇÃO - os exercícos de escrita de código também estão comentados para
     listaDeTarefas.splice(deletaDaLista, 1);
 
     console.log(listaDeTarefas);
-*/
 
+ */
 //4.
 /* 
     let nome;
@@ -75,14 +75,14 @@ OSERVAÇÃO - os exercícos de escrita de código também estão comentados para
     email = prompt("Qual seu email?");
 
     console.log("O e-mail "+email+" foi cadastrado com sucesso. Seja bem-vinda(o), "+nome+"!");
-*/
 
+ */
 /*
 DESAFIOS 
 */
 
 //1.
-/*
+/* 
     let transform; 
 
     transform = (77-32)*5/9+273.15;
@@ -104,10 +104,10 @@ DESAFIOS
 
     console.log("30ºC para K");
     console.log(transform+"K");
-*/
+ */
 
 //2. 
-/*
+/* 
     let consumo = 280;
     let quilowattHora = 0.05;
     let valor; 
@@ -120,7 +120,7 @@ DESAFIOS
     desconto = valor - (valor*15)/100;
 
     console.log("Valor com 15% de desconto", desconto);
-*/
+ */
 
 //3. 
     let libra = 20;
