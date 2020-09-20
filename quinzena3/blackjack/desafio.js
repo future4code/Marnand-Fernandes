@@ -53,25 +53,22 @@ let totalPc = 0;
             for (let i in cartasUsuario) {
                totalUser += cartasUsuario[i].valor;
             }
-            
-            //soma todos os itens do array cartasComputador com a propriedade valor
-            for (let i in cartasComputador) {
-               totalPc += cartasComputador[i].valor;
-            }
 
+            let cartasUser = cartasUsuario.map(function(item){return item.texto}); 
+            let cartasPc = cartasComputador.map(function(item){return item.texto}); 
 
             if(totalUser <= 21 && totalUser > totalPc) {
-               confirm("Suas cartas são "+cartasUsuario+". Sua pontuação é 22. As cartas do computador são Q♠️ K♦️ . A pontuação do computador é 20. O usuário ganhou!");
+               confirm("Suas cartas são "+cartasUser+". Sua pontuação é "+totalUser+". As cartas do computador são "+cartasPc+" . A pontuação do computador é "+totalPc+". O usuário ganhou!");
             } if (totalUser <= 21 && totalUser < totalPc) {
-               confirm("Suas cartas são "+cartasUsuario+". Sua pontuação é 22. As cartas do computador são Q♠️ K♦️ . A pontuação do computador é 20. O computador ganhou!");
+               confirm("Suas cartas são "+cartasUser+". Sua pontuação é "+totalUser+". As cartas do computador são "+cartasPc+" . A pontuação do computador é "+totalPc+". O computador ganhou!");
             } if (totalUser <= 21 && totalUser === totalPc) {
-               confirm("Suas cartas são "+cartasUsuario+". Sua pontuação é 22. As cartas do computador são Q♠️ K♦️ . A pontuação do computador é 20. Empate!");
+               confirm("Suas cartas são "+cartasUser+". Sua pontuação é "+totalUser+". As cartas do computador são "+cartasPc+" . A pontuação do computador é "+totalPc+". Empate!");
             } if (totalUser > 21 && totalUser < totalPc) {
-               confirm("Suas cartas são "+cartasUsuario+". Sua pontuação é 22. As cartas do computador são Q♠️ K♦️ . A pontuação do computador é 20. O usuário ganhou!");
+               confirm("Suas cartas são "+cartasUser+". Sua pontuação é "+totalUser+". As cartas do computador são "+cartasPc+" . A pontuação do computador é "+totalPc+". O usuário ganhou!");
             } if (totalUser > 21 && totalUser > totalPc) {
-               confirm("Suas cartas são "+cartasUsuario+". Sua pontuação é 22. As cartas do computador são Q♠️ K♦️ . A pontuação do computador é 20. O computador ganhou!");
+               confirm("Suas cartas são "+cartasUser+". Sua pontuação é "+totalUser+". As cartas do computador são "+cartasPc+" . A pontuação do computador é "+totalPc+". O computador ganhou!");
             } if (totalUser > 21 && totalUser === totalPc) {
-               confirm("Suas cartas são "+cartasUsuario+". Sua pontuação é 22. As cartas do computador são Q♠️ K♦️ . A pontuação do computador é 20. Empate!");
+               confirm("Suas cartas são "+cartasUser+". Sua pontuação é "+totalUser+". As cartas do computador são "+cartasPc+" . A pontuação do computador é "+totalPc+". Empate!");
             } 
          }
 
