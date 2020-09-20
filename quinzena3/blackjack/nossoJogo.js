@@ -31,7 +31,7 @@ console.log("Bem vindo ao jogo de Blackjack!");
       const cartasComputador = [comprarCarta(), comprarCarta()];
       //somando os valores para encontrar a pontuação final das cartas do Usuário
       valorPc = cartasComputador[0].valor + cartasComputador[1].valor;
-      console.log("Usuário - cartas: "+ cartasComputador[0].texto, cartasComputador[1].texto+" - pontuação "+valorPc);
+      console.log("Computador - cartas: "+ cartasComputador[0].texto, cartasComputador[1].texto+" - pontuação "+valorPc);
 
          if(valorUser > valorPc) {
             console.log("O usuário ganhou!");
