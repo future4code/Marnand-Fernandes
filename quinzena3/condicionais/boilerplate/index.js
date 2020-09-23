@@ -100,4 +100,215 @@
 */
 
 // DESAFIO 2
+    const nome = prompt("Digite seu nome completo");
+    let tipoJogo = prompt("O jogo que deseja assistir é internacional, IN ou doméstico, DO?"); 
+    let etapaJogo = prompt("O jogo que deseja assistir está em qual etapa?"+"\n" 
+                            +"SF - semi-final, DT - decisão de 3º lugar ou FI - final"); 
+    let categoria = Number(prompt("Qual a categoria do jogo? 1, 2, 3 ou 4"));
+    const qtdIngressos = Number(prompt("Quantos ingressos deseja?"));
+    let valor;
+
+    switch (tipoJogo) {
+        case "IN":
+            tipoJogo = "Internacional";
+            break;
+        
+        case "DO":
+            tipoJogo = "Doméstico";
+            break; 
+
+        default:
+            tipoJogo = "Valor indefinido, escolha novamente!";
+            break;
+    }
+
+    switch (etapaJogo) {
+        case "SF":
+            etapaJogo = "Semi-final";
+            break;
+        
+        case "DT":
+            etapaJogo = "Disputa pelo 3º lugar";
+            break; 
+
+        case "FI":
+            etapaJogo = "Final";
+            break; 
+
+        default:
+            tipoJogo = "Valor indefinido, escolha novamente!";
+            break;
+    }
+
+
+
+    console.log("---Dados da compra---");
+    console.log("Nome so cliente:", nome);
+    console.log("Tipo do jogo:", tipoJogo);
+    console.log("Etapa do jogo:", etapaJogo);
+    console.log("Categoria:", categoria);
+    console.log("Quantidade de ingressos:", qtdIngressos);
+    console.log("---Valores---");
+
+    //começo do bloco if principal
+    if (tipoJogo === "Doméstico") {
+        if (etapaJogo === "Semi-final" && categoria === 1) {
+            valor = 1320; 
+            
+            console.log("Valor do ingresso: R$", valor);
+            console.log("Valor total: R$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Disputa pelo 3º lugar" && categoria === 1) {
+            valor = 660; 
+            
+            console.log("Valor do ingresso: R$", valor);
+            console.log("Valor total: R$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Final" && categoria === 1) {
+            valor = 1980; 
+            
+            console.log("Valor do ingresso: R$", valor);
+            console.log("Valor total: R$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Semi-final" && categoria === 2) {
+            valor = 880; 
+            
+            console.log("Valor do ingresso: R$", valor);
+            console.log("Valor total: R$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Disputa pelo 3º lugar" && categoria === 2) {
+            valor = 440; 
+            
+            console.log("Valor do ingresso: R$", valor);
+            console.log("Valor total: R$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Final" && categoria === 2) {
+            valor = 1320; 
+            
+            console.log("Valor do ingresso: R$", valor);
+            console.log("Valor total: R$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Semi-final" && categoria === 3) {
+            valor = 550; 
+            
+            console.log("Valor do ingresso: R$", valor);
+            console.log("Valor total: R$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Disputa pelo 3º lugar" && categoria === 3) {
+            valor = 330; 
+            
+            console.log("Valor do ingresso: R$", valor);
+            console.log("Valor total: R$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Final" && categoria === 3) {
+            valor = 880; 
+            
+            console.log("Valor do ingresso: R$", valor);
+            console.log("Valor total: R$", valor * qtdIngressos);
+            
+        } else if (etapaJogo === "Semi-final" && categoria === 4) {
+            valor = 220; 
+            
+            console.log("Valor do ingresso: R$", valor);
+            console.log("Valor total: R$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Disputa pelo 3º lugar" && categoria === 4) {
+            valor = 170; 
+            
+            console.log("Valor do ingresso: R$", valor);
+            console.log("Valor total: R$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Final" && categoria === 4) {
+            valor = 330; 
+            
+            console.log("Valor do ingresso: R$", valor);
+            console.log("Valor total: R$", valor * qtdIngressos);
+            
+        } else {
+            console.log("Parece que você digitou algo que não devia, tente novamente!");
+        }
+    
+    //meio do bloco if principal, else if
+    } else if (tipoJogo === "Internacional"){
+        if (etapaJogo === "Semi-final" && categoria === 1) {
+            valor = 1320 * 4.1; 
+            
+            console.log("Valor do ingresso: R$", valor);
+            console.log("Valor total: R$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Disputa pelo 3º lugar" && categoria === 1) {
+            valor = 660 * 4.1; 
+            
+            console.log("Valor do ingresso: U$", valor);
+            console.log("Valor total: U$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Final" && categoria === 1) {
+            valor = 1980 * 4.1; 
+            
+            console.log("Valor do ingresso: U$", valor);
+            console.log("Valor total: U$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Semi-final" && categoria === 2) {
+            valor = 880 * 4.1; 
+            
+            console.log("Valor do ingresso: U$", valor);
+            console.log("Valor total: U$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Disputa pelo 3º lugar" && categoria === 2) {
+            valor = 440 * 4.1; 
+            
+            console.log("Valor do ingresso: U$", valor);
+            console.log("Valor total: U$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Final" && categoria === 2) {
+            valor = 1320 * 4.1; 
+            
+            console.log("Valor do ingresso: U$", valor);
+            console.log("Valor total: U$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Semi-final" && categoria === 3) {
+            valor = 550 * 4.1; 
+            
+            console.log("Valor do ingresso: U$", valor);
+            console.log("Valor total: U$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Disputa pelo 3º lugar" && categoria === 3) {
+            valor = 330 * 4.1; 
+            
+            console.log("Valor do ingresso: U$", valor);
+            console.log("Valor total: U$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Final" && categoria === 3) {
+            valor = 880 * 4.1; 
+            
+            console.log("Valor do ingresso: U$", valor);
+            console.log("Valor total: U$", valor * qtdIngressos);
+            
+        } else if (etapaJogo === "Semi-final" && categoria === 4) {
+            valor = 220 * 4.1; 
+            
+            console.log("Valor do ingresso: U$", valor);
+            console.log("Valor total: U$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Disputa pelo 3º lugar" && categoria === 4) {
+            valor = 170 * 4.1; 
+            
+            console.log("Valor do ingresso: U$", valor);
+            console.log("Valor total: U$", valor * qtdIngressos);
+
+        } else if (etapaJogo === "Final" && categoria === 4) {
+            valor = 330 * 4.1; 
+            
+            console.log("Valor do ingresso: U$", valor);
+            console.log("Valor total: U$", valor * qtdIngressos);
+            
+        } else {
+            console.log("Parece que você digitou algo que não devia, tente novamente!");
+        }
+    
+    //final do bloco if principal, else
+    } else {
+        console.log("Parece que você digitou algo que não devia, tente novamente!");
+    }
+
     
