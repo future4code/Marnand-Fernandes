@@ -310,5 +310,4 @@
     } else {
         console.log("Parece que você digitou algo que não devia, tente novamente!");
     }
-
     
