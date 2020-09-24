@@ -20,7 +20,7 @@
 //----------------------------------> Exercícios de escrita de código <----------------------------------//
 // EXERCÍCIO 3
 // Este array será usado para exemplificar as respostas de todos os itens
-     const arrayOriginal = [10, 11, 12, 15, 18];  
+    const arrayOriginal = [10, 11, 12, 15, 18];  
 
     // // Resposta item a.
     // for (let numero of arrayOriginal) {
@@ -74,7 +74,3 @@
     }
 
     console.log(valorMinimo);
-
-// DESAFIO 2
-
-
