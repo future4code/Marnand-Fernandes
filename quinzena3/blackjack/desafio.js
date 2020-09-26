@@ -10,75 +10,93 @@
  * 
  * 
  */
-let resposta = confirm("Quer iniciar uma nova rodada?");
-let valorUser;
-let valorPc;
+
+//Declarando principais variáveis
+let iniciaJogo = confirm("Quer iniciar uma nova rodada?");
+//Sortear as cartas
+let cartasUser = [comprarCarta(), comprarCarta()];
+let cartasPc = [comprarCarta(), comprarCarta()];
 let totalUser = 0;
 let totalPc = 0;
 
- console.log("Bem vindo ao jogo de Blackjack!");
+//Mensagem de boas vindas
+console.log("Bem vindo ao jogo de Blackjack!");
 
-   //criando condição para iniciar ou não o jogo
-   if(resposta === true) {
+//Verifica se o jogo foi iniciado ou não
+if (iniciaJogo === false) {
+    //Mensagem caso o jogo não tenha sido iniciado
+    console.log("O jogo acabou!");
+} else {
+    //caso o jogo tenha sido iniciado, executa o programa
 
-      //array para gerar os valores das cartas do Usuário
-      const cartasUsuario = [comprarCarta(), comprarCarta()];
-      const cartasComputador = [comprarCarta(), comprarCarta()];
-
-         //verifica se não houve a chamada de duas cartas ases (A), ou seja, valor 11, ao mesmo tempo
-         if(cartasUsuario[0].valor === 11 && cartasUsuario[1].valor === 11 || cartasComputador[0].valor === 11 && cartasComputador[1].valor === 11) {
-            cartasUsuario = [comprarCarta(), comprarCarta()];
-            cartasComputador = [comprarCarta(), comprarCarta()];
-         } 
-
-         //Caixa de diálogo mostrando as cartas sorteadas
-         let maisUma = confirm(
-            "Suas cartas são "+cartasUsuario[0].texto+" "+cartasUsuario[1].texto+". A carta revelada do computador é "+cartasComputador[0].texto+"."+
+    //Caso apareça dois ases (A), sortear as cartas novamente
+    if (cartasUser[0].valor === 11 && cartasUser[1].valor === 11 || cartasPc[0].valor === 11 && cartasPc[1].valor === 11) {
+        console.log("As cartas devem ser sorteadas novamente, por favor utilize a tecla F5");
+    } else {
+        let maisUmaCarta = confirm(
+            "Suas cartas são "+cartasUser[0].texto+", "+cartasUser[1].texto+". A carta revelada do computador é "+cartasPc[0].texto+"." +
             "\n"+  // \n faz pular a linha
             "Deseja comprar mais uma carta?"
-         );
-
-         //Verifica se houve compra de carta
-         if(maisUma === true) {
-            cartasUsuario.push(comprarCarta());
-            cartasComputador.push(comprarCarta());
-
-            confirm(
-               "Suas cartas são "+cartasUsuario[0].texto+" "+cartasUsuario[1].texto+" "+cartasUsuario[2].texto+". A carta revelada do computador é "+cartasComputador[0].texto+" "+cartasComputador[1].texto+"."+
-               "\n"+  // \n faz pular a linha
-               "Deseja comprar mais uma carta?"
             );
+            
+            while (maisUmaCarta === true) {
+                //declarando um novo array
+                let cartasTextoUser = []; 
 
-            //soma todos os itens do array cartasUsuario com a propriedade valor
-            for (let i in cartasUsuario) {
-               totalUser += cartasUsuario[i].valor;
+                //acrescentando mais um elemeto no array cartasUser
+                cartasUser.push(comprarCarta());
+
+                //console.log(cartasUser);
+
+                //criando novo array para mostar apenas o valor do texto do array cartasUser
+                for (let cartaUser of cartasUser) {
+                    cartasTextoUser.push(cartaUser.texto);
+                }
+
+                maisUmaCarta = confirm(
+                    "Suas cartas são "+cartasTextoUser+". A carta revelada do computador é "+cartasPc[0].texto+"." +
+                    "\n"+  // \n faz pular a linha
+                    "Deseja comprar mais uma carta?"
+                ); 
+
+                //Soma o valor de todas as cartas sorteadas do usuário
+                for (let cartaUser of cartasUser) {
+                    totalUser += cartaUser.valor;
+                }
+
+                //Soma o valor de todas as cartas sorteadas do PC
+                for (let cartaPc of cartasPc) {
+                    totalPc += cartaPc.valor;
+                }
+
+                if (totalUser >= 21 || maisUmaCarta === false) {
+                    if (totalUser > totalPc && totalUser < 21) {
+                        maisUmaCarta = alert(
+                            "Suas cartas são "+cartasTextoUser+" . Sua pontuação é "+totalUser+"."+"\n"+ 
+                            "As cartas do computador "+cartasPc[0].texto+", "+cartasPc[1].texto+". A pontuação do computador é "+totalPc+"."+"\n"+
+                            "O usuário ganhou!."
+                        ); 
+                    } else if (totalUser > totalPc && totalUser > 21) {
+                        maisUmaCarta = alert(
+                            "Suas cartas são "+cartasTextoUser+" . Sua pontuação é "+totalUser+"."+"\n"+ 
+                            "As cartas do computador "+cartasPc[0].texto+", "+cartasPc[1].texto+". A pontuação do computador é "+totalPc+"."+"\n"+
+                            "O computador ganhou!."
+                        ); 
+                    } else if (totalUser < totalPc && totalPc < 21) {
+                        maisUmaCarta = alert(
+                            "Suas cartas são "+cartasTextoUser+" . Sua pontuação é "+totalUser+"."+"\n"+ 
+                            "As cartas do computador "+cartasPc[0].texto+", "+cartasPc[1].texto+". A pontuação do computador é "+totalPc+"."+"\n"+
+                            "O computador ganhou!."
+                        ); 
+                    } else if (totalUser < totalPc && totalPc > 21) {
+                        maisUmaCarta = alert(
+                            "Suas cartas são "+cartasTextoUser+" . Sua pontuação é "+totalUser+"."+"\n"+ 
+                            "As cartas do computador "+cartasPc[0].texto+", "+cartasPc[1].texto+". A pontuação do computador é "+totalPc+"."+"\n"+
+                            "O usuário ganhou!."
+                        ); 
+                    }
+                }
             }
+    }
 
-            let cartasUser = cartasUsuario.map(function(item){return item.texto}); 
-            let cartasPc = cartasComputador.map(function(item){return item.texto}); 
-
-            if(totalUser <= 21 && totalUser > totalPc) {
-               confirm("Suas cartas são "+cartasUser+". Sua pontuação é "+totalUser+". As cartas do computador são "+cartasPc+" . A pontuação do computador é "+totalPc+". O usuário ganhou!");
-            } if (totalUser <= 21 && totalUser < totalPc) {
-               confirm("Suas cartas são "+cartasUser+". Sua pontuação é "+totalUser+". As cartas do computador são "+cartasPc+" . A pontuação do computador é "+totalPc+". O computador ganhou!");
-            } if (totalUser <= 21 && totalUser === totalPc) {
-               confirm("Suas cartas são "+cartasUser+". Sua pontuação é "+totalUser+". As cartas do computador são "+cartasPc+" . A pontuação do computador é "+totalPc+". Empate!");
-            } if (totalUser > 21 && totalUser < totalPc) {
-               confirm("Suas cartas são "+cartasUser+". Sua pontuação é "+totalUser+". As cartas do computador são "+cartasPc+" . A pontuação do computador é "+totalPc+". O usuário ganhou!");
-            } if (totalUser > 21 && totalUser > totalPc) {
-               confirm("Suas cartas são "+cartasUser+". Sua pontuação é "+totalUser+". As cartas do computador são "+cartasPc+" . A pontuação do computador é "+totalPc+". O computador ganhou!");
-            } if (totalUser > 21 && totalUser === totalPc) {
-               confirm("Suas cartas são "+cartasUser+". Sua pontuação é "+totalUser+". As cartas do computador são "+cartasPc+" . A pontuação do computador é "+totalPc+". Empate!");
-            } 
-         }
-
-/* 
-//O reduce faz a soma dos elemtos de uma array de maneira mais simples que um laço de repetição
-//O método reduce()executa uma função reducer (fornecida por você) para cada elemento do array, resultando num único valor de retorno.
-let total = cartasUsuario.reduce((total, cartasUsuario) => total + cartasUsuario.valor, 0);//)O zero é dado como valor inicial
-console.log(total);
-*/
-      
-  } else {
-      console.log("O jogo acabou!");
-   }
+}
