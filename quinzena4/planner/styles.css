@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px;
+}
+
+.form {
+    width: 70%;
+}
+
+form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input, select, button {
+    margin-bottom: 10px;
+    padding: 7px;
+    border-radius: 4px;
+    outline: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    
+    margin: 0 3%;
+}
+
+.semana {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    border: 1px dotted rgb(53, 53, 53);
+    border-radius: 4px;
+    height: 70vh;
+    padding: 5px;
+    
+    overflow: auto;
+}
+
+li {
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    .semana {
+        min-width: 200px;
+    }
+}
