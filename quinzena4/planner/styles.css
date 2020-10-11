@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fffff0;
+    font-family: 'Sansita Swashed', cursive;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 16px;
+
+    background-color: #bebebe;
+}
+
+label {
+    font-weight: 900;
+}
+
+input, select {
+    padding: 8px;
+
+    outline: none;
+
+    border: 0;
+    border-radius: 4px;
+
+    font-family: 'Sansita Swashed', cursive;
+}
+
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px;
+
+    outline: none;
+    cursor: pointer;
+    font-weight: 700;
+
+    border: 0;
+    border-radius: 4px;
+
+    font-family: 'Sansita Swashed', cursive;
+}
+
+.caixa {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-right: 2px;
+    padding: 0 10%;
+}
+
+.semana {
+    box-sizing: border-box;
+
+    width: 200px;
+    height: 200px;
+
+    margin-top: 20px;
+    border-radius: 4px;
+    padding: 8px;
+
+    background-color: #cdcdc1;
+
+    box-shadow: 5px 5px #888888;
+
+    overflow-wrap: break-word;
+}
+
+.semana li {
+    margin-top: 10px;
+    list-style-position: inside;
+}
+
+.riscar {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 500px) {
+    input {
+        width: 90px;
+    }
+}
