@@ -1,0 +1,10 @@
+/* limpar formatação do navegador */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    border: 3px double #c1c1c1;
+}
