@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
+import lupa from './lupa.svg';
+import labenu from './labenu.png';
 import './App.css';
 
 function App() {
@@ -11,22 +12,30 @@ function App() {
 
   return (
     <div>
-      <div class="tela-inteira">
+      <div className="tela-inteira">
         <header>
-          <h1>Lab Tube</h1>
-          <input type="text" placeholder="Busca" id="campoDeBusca" />
+          <h1>
+            <span className="logo">
+              <img src={labenu} />
+            </span>
+            Lab Tube
+          </h1>
+          <form>
+            <input type="text" placeholder="Pesquisar" id="campoDeBusca" />
+            <span>
+              <img src={lupa} />
+            </span>
+          </form>
         </header>
 
         <main>
           <nav className="menu-vertical">
-            <ul>
-              <li className="botoes-meunu-vertical">Início</li>
-              <li className="botoes-meunu-vertical">Em alta</li>
-              <li className="botoes-meunu-vertical">Inscrições</li>
-              <hr />
-              <li className="botoes-meunu-vertical">Originais</li>
-              <li className="botoes-meunu-vertical">Histórico</li>
-            </ul>
+            <div className="botoes-meunu-vertical">Início</div>
+            <div className="botoes-meunu-vertical">Em alta</div>
+            <div className="botoes-meunu-vertical">Inscrições</div>
+            <hr />
+            <div className="botoes-meunu-vertical">Originais</div>
+            <div className="botoes-meunu-vertical">Histórico</div>
           </nav>
 
           <section className="painel-de-videos">
@@ -65,9 +74,6 @@ function App() {
           </section>
         </main>
 
-        <footer>
-          <h4>Oi! Eu moro no footer!</h4>
-        </footer>
       </div>
     </div>
   );
