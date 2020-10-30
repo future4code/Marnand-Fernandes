@@ -44,7 +44,7 @@ export const Container = styled.div`
     }
 
     button {
-        padding: 15px 0;
+        padding: 8px 0;
 
         border: none;
         border-radius: 5px;
