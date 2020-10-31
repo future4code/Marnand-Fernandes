@@ -64,3 +64,7 @@ export const Container = styled.div`
         background-color: #006D77;
     }
 `
+
+export const Lista = styled.li`
+    text-decoration: ${({ completa }) => (completa ? 'line-through' : 'none')};
+`

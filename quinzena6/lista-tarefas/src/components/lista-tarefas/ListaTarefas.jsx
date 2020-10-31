@@ -1,39 +1,34 @@
 import React, { Component } from 'react'
 import { Container } from '../styled-components/StyledComponents'
-import styled from 'styled-components'
-
-const Lista = styled.li`
-  text-decoration: ${({completa}) => (completa ? 'line-through' : 'none')};
-`
+import { Lista } from '../styled-components/StyledComponents'
 
 export default class ListaTarefas extends Component {
   // estado com valor do input e select
   state = {
-    tarefas: [
-      {
-        id: Date.now(),
-        texto: '1ª Tarefa',
-        completa: false
-      },
-      {
-        id: Date.now(),
-        texto: '2ª Tarefa',
-        completa: true
-      }
-    ],
+    tarefas: [],
 
     tarefa: '',
 
     filtro: ''
   }
 
+  //-------------------------
+  componentDidMount() {
+    const objTarefas = JSON.parse(localStorage.getItem('tarefas'))
+    if (objTarefas) {
+      this.setState({ tarefas: objTarefas })
+    }
+  }
+
+  componentDidUpdate() {
+    const strTarefas = JSON.stringify(this.state.tarefas)
+    localStorage.setItem('tarefas', strTarefas)
+  }
+
+  //-------------------------
   valorInput = (event) => {
     // permite que o input receba valores
     this.setState({ tarefa: event.target.value })
-  }
-
-  valorSelect = (event) => {
-    this.setState({ filtro: event.target.value })
   }
 
   criarTarefa = () => {
@@ -47,24 +42,62 @@ export default class ListaTarefas extends Component {
 
     this.setState({ tarefas: novasTarefas })
 
-    console.log(this.state.tarefa)
+    //console.log(this.state.tarefa)
+  }
+
+  //-------------------------
+  valorSelect = (event) => {
+    this.setState({ filtro: event.target.value })
+  }
+
+  //-------------------------
+  alteraCompleta = (id) => {
+    const attCompleta = this.state.tarefas.map((tarefa) => {
+      if (id === tarefa.id) {
+        const novoValor = { ...tarefa, completa: !tarefa.completa }
+        return novoValor
+      } else {
+        return tarefa
+      }
+    })
+
+    this.setState({ tarefas: attCompleta })
   }
 
   render() {
+    const listaFiltrada = this.state.tarefas.filter(tarefa => {
+      switch (this.state.filtro) {
+        case 'pendentes':
+          return !tarefa.completa
+        case 'completas':
+          return tarefa.completa
+        default:
+          return true
+      }
+    })
+
     return (
       <Container>
         <h1>Lista de tarefas</h1>
         <input onChange={this.valorInput} /> <button onClick={this.criarTarefa}>Adicionar</button>
         <label>Filtro</label>
 
-        <select onChange={this.valorSelect}>
-          <option value="1">Nenhum</option>
-          <option value="2">Pendentes</option>
-          <option value="3">Completas</option>
+        <select value={this.state.filter} onChange={this.valorSelect}>
+          <option value="">Nenhum</option>
+          <option value="pendentes">Pendentes</option>
+          <option value="completas">Completas</option>
         </select>
 
         <ul>
-          {this.state.tarefas.map((tarefa) => { return <Lista>{tarefa.texto}</Lista> })}
+          {listaFiltrada.map((tarefa) => {
+            return (
+              <Lista
+                onClick={() => this.alteraCompleta(tarefa.id)}
+                completa={tarefa.completa}>
+                {tarefa.texto}
+              </Lista>
+            )
+          })}
         </ul>
 
       </Container>
