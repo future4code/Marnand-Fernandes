@@ -1,35 +1,63 @@
 import styled from 'styled-components'
-import container from './components/images/container.png'
 
 export const Container = styled.div`
-  background-image: url(${container});
-  background-repeat: no-repeat;
-  background-position: 0 left;
-
-  text-align: center;
+  display: flex;
+  flex-direction: column; 
 
   height: 100vh;
-`
 
-export const Aside = styled.section`
-  position: absolute;
-  right: 0;
+  header, aside, main {
+    color: #fff;
+    box-sizing: border-box;
+  }
 
-  box-sizing: border-box;
+  section {
+    display: flex;
+    
+    flex: 1;
+  }
 
-  height: 100vh;
-  width: 33%;
-  padding: 20px;
+  header, main {
+    width: 100vw;
+  }
 
-  border-radius: 20px 0 0 20px;
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
-  color: #fff;
-  background-color: #1a1a1a;
+    background-color: #000;
+  }
 
-  @media (max-width: 700px) {
-    width: 100%;
-    height: 100vh;
+  header > img {
+    width: 70px;
+  }
 
-    border-radius: 0;
+  header > h1 {
+    padding: 5px 3px;
+
+    text-align: center;
+
+    background: -webkit-linear-gradient(#fff, #9f187f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    border-bottom: 1px solid #ea4b8e;
+    border-radius: 3px;
+
+    cursor: pointer;
+  }
+
+  aside {
+    min-width: 30%;
+
+    padding: 1rem;
+
+    background-color: #000;
+  }
+
+  main {
+    padding-left: 3%;
+    padding-top: 1rem;
   }
 `
