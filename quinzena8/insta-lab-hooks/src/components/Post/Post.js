@@ -9,6 +9,7 @@ import iconeCoracaoPreto from '../../img/favorite.svg'
 import iconeComentario from '../../img/comment_icon.svg'
 
 const Post = (props) => {
+
   const [ curtido, setCurtido ] = useState(false)
   const [ numeroCurtidas, setNumeroCurtidas ] = useState(0)
   const [ comentando, setComentando ] = useState(false)
@@ -51,6 +52,7 @@ const Post = (props) => {
     })
   )
 
+
   return (
     <PostContainer>
       <PostHeader>
@@ -62,19 +64,23 @@ const Post = (props) => {
 
       <PostFooter>
         <IconeComContador
+
           icone={iconeCurtida}
           onClickIcone={onClickCurtida}
           valorContador={numeroCurtidas}
+
         />
 
         <IconeComContador
           icone={iconeComentario}
           onClickIcone={onClickComentario}
+
           valorContador={numeroComentarios}
         />
       </PostFooter>
         {caixaDeComentario}
       </PostContainer>
+
   )
 }
 
