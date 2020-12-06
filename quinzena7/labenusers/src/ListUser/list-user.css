@@ -1,0 +1,92 @@
+.background-list {
+    height: 100vh;
+    width: 70%;
+
+    background-image: url("./list.svg");
+    background-position: 5vw 2vh;
+    background-repeat: no-repeat;
+
+    position: absolute;
+}
+
+.list-user {
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    width: 400px;
+    min-height: 100%;
+
+    padding-top: 50px;
+
+    position: absolute;
+    right: 0;
+
+    color: #fff;
+    background-color: #102542;
+}
+
+.list-user > img {
+    margin: 30px auto 0 auto;
+
+    width: 80px;
+}
+
+.list-user > p {
+    margin-bottom: 5px;
+
+    padding: 4px 0;
+
+    border-radius: 20px;
+
+    font-size: 24px;
+
+    transform: scale(0.8);
+
+    box-shadow: 2px 4px 1px 1px #808080;
+
+    color: #102542;
+    background-color: #fff;
+}
+
+.list-user > p:hover {
+    transform: scale(0.9);
+
+    font-size: 24px;
+
+    color: #fff;
+    background-color: #6c63ff;
+}
+
+p > img {
+    width: 20px;
+
+    margin-left: 4px;
+    margin-bottom: 5px;
+
+    cursor: pointer
+}
+
+.btn-back {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+
+    padding: 10px;
+
+    border: 0;
+
+    cursor: pointer;
+
+    color: #fff;
+    background: none;
+}
+
+.btn-back > img {
+    position: absolute;
+    top: 9.3px;
+    right: 48px;
+
+    width: 16px;
+}
