@@ -19,6 +19,8 @@ const ContainerHeader = styled.section`
 
   img {
     height: 100%;
+
+    cursor: pointer;
   }
 `
 
