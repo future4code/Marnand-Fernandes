@@ -4,6 +4,7 @@ import Error from '../components/Error';
 import CreateTrip from '../components/private/CreateTrip';
 import DetailsTrip from '../components/private/DetailsTrip';
 import Login from '../components/private/Login';
+import ManageTrips from '../components/private/ManageTrips';
 import ApplicationForm from '../components/public/ApplicationForm';
 import Home from '../components/public/Home';
 import ListTrips from '../components/public/ListTrips';
@@ -29,11 +30,15 @@ const Router = () => {
           <Login />
         </Route>
 
-        <Route exact path="/trips/create">
+        <Route exact path="/trips/manage">
+          <ManageTrips />
+        </Route>
+
+        <Route exact path="/trips/manage/create">
           <CreateTrip />
         </Route>
 
-        <Route exact path="/trips/details">
+        <Route exact path="/trips/manage/details">
           <DetailsTrip />
         </Route>
 
@@ -42,7 +47,7 @@ const Router = () => {
         </Route>
       </Switch>
     </BrowserRouter>
-  )
+  );
 };
 
 export default Router;
