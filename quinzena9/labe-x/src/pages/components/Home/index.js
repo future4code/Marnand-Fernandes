@@ -1,21 +1,11 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
-import Container from './styled'
-import rocket from '../../../../assets/icons/foguete.svg';
-import planet from '../../../../assets/icons/planetas.svg';
-import logo from '../../../../assets/icons/futurama.svg';
+import {Link} from 'react-router-dom';
+import Container from './styled';
+import rocket from '../../../assets/icons/foguete.svg';
+import planet from '../../../assets/icons/planetas.svg';
+import logo from '../../../assets/icons/futurama.svg';
 
 const Home = () => {
-  const history = useHistory();
-
-  const goToTripsList = () => {
-    return history.push("/trips/list");
-  };  
-
-  const goToLogin = () => {
-    return history.push("/login");
-  };
-
   return (
     <Container>
       <header>
@@ -39,8 +29,14 @@ const Home = () => {
         </section>
       </article>
 
-      <button onClick={goToTripsList}>Lista de viagens</button>
-      <button onClick={goToLogin}>Acesso Restrito</button>
+      <div>
+      <Link to={"/candidatarse"}>
+        <button>Candidatar-se a uma viagem</button>
+      </Link>
+      <Link to={"/acessar"}>
+        <button>Acesso Restrito</button>
+      </Link>
+      </div>
     </Container>
   );
 };

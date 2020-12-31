@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import spaceTrip from '../../../../assets/img/space-trip.png';
+import spaceTrip from '../../../assets/img/space-trip.png';
 
 const Container = styled.div`  
   header {

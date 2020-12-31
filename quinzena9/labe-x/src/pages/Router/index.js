@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Error from '../components/Error';
-import CreateTrip from '../components/private/CreateTrip';
-import DetailsTrip from '../components/private/DetailsTrip';
-import Login from '../components/private/Login';
-import ManageTrips from '../components/private/ManageTrips';
-import ApplicationForm from '../components/public/ApplicationForm';
-import Home from '../components/public/Home';
-import ListTrips from '../components/public/ListTrips';
+import CreateTrip from '../components/CreateTrip';
+import DetailsTrip from '../components/DetailsTrip';
+import Login from '../components/Login';
+import ManageTrips from '../components/ManageTrips';
+import ApplicationForm from '../components/ApplicationForm';
+import Home from '../components/Home';
+import ListTrips from '../components/ListTrips';
 
 const Router = () => {
   return (
@@ -18,27 +18,27 @@ const Router = () => {
           <Home />
         </Route>
 
-        <Route exact path="/trips/list">
+        <Route exact path="/viagens/lista">
           <ListTrips />
         </Route>
 
-        <Route exact path="/form">
+        <Route exact path="/candidatarse">
           <ApplicationForm />
         </Route>
 
-        <Route exact path="/login">
+        <Route exact path="/acessar">
           <Login />
         </Route>
 
-        <Route exact path="/trips/manage">
+        <Route exact path="/viagens/adm">
           <ManageTrips />
         </Route>
 
-        <Route exact path="/trips/manage/create">
+        <Route exact path="/viagem/adm/criar">
           <CreateTrip />
         </Route>
 
-        <Route exact path="/trips/manage/details">
+        <Route exact path="/viagem/detalhes">
           <DetailsTrip />
         </Route>
 
