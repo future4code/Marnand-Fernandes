@@ -1,13 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Container from './styled';
 import rocket from '../../../assets/icons/foguete.svg';
 import planet from '../../../assets/icons/planetas.svg';
 import logo from '../../../assets/icons/futurama.svg';
 
 const Home = () => {
   return (
-    <Container>
+    <div>
       <header>
         <div>
           <img src={logo} />
@@ -37,7 +36,7 @@ const Home = () => {
         <button>Acesso Restrito</button>
       </Link>
       </div>
-    </Container>
+    </div>
   );
 };
 

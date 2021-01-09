@@ -1,7 +1,9 @@
 import styled from "styled-components";
-import spaceTrip from '../../../assets/img/space-trip.png';
+import spaceTrip from '../src/assets/img/space-trip.png';
 
 const Container = styled.div`  
+  text-align: center;
+
   header {
     background: url(${spaceTrip}) no-repeat;
     background-size: cover;
@@ -56,6 +58,51 @@ const Container = styled.div`
     height: 200px;
     border: 1px solid #000;
     width: 25%;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  li {
+    font-weight: 900;
+    color: white;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff; 
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  input, select {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 50px;
+  }
+
+  button{
+    padding: 10px;
+    width: 80%;
+    margin: 9px;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(to right, orangered, orange);
+    cursor: pointer;
+  }
+
+  .btn {
+    width: 15%;
   }
 
   @media (max-width: 800px){

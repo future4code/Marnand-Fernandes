@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CandidateInfor from './CandidateInfor';
 
-const TripCandidates = () => {
+const TripCandidates = (props) => {
   return (
     <div>
       <h1>Trip Candidates</h1>
-      Candidato 1 <button>sim</button><button>não</button>
-      Candidato 2 <button>sim</button><button>não</button>
-      Candidato 3 <button>sim</button><button>não</button>
+
+      {props.candidates.map((candidate) => { 
+        return <CandidateInfor candidate={candidate} decide={props.decide} />
+      })}
 
       <div>
         <Link to={"/viagens/adm"}>

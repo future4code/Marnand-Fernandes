@@ -18,7 +18,7 @@ const Router = () => {
           <Home />
         </Route>
 
-        <Route exact path="/viagens/lista">
+        <Route exact path="/viagens">
           <ListTrips />
         </Route>
 
@@ -38,7 +38,7 @@ const Router = () => {
           <CreateTrip />
         </Route>
 
-        <Route exact path="/viagem/detalhes">
+        <Route exact path="/viagem/detalhes/:id">
           <DetailsTrip />
         </Route>
 

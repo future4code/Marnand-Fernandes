@@ -20,7 +20,7 @@ const onSubmitLogin = (e) => {
   Axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/marnand-tang/login', body)
   .then((res) => {
     window.localStorage.setItem('token', res.data.token);
-    history.push("/viagens/lista");
+    history.push("/viagens");
   })
 }
 
